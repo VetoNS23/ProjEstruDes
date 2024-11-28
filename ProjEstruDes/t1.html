@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Decisão</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        justify-content: center;
+    }
+    h1 {
+        text-align: center;
+    }
+    p {
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+ 
+    
+</style>
+<body>
+    <h1>Estrutura de Decisão - Maior Número</h1>
+   <script>
+    for (let i = 0; i < 1; i++) {
+        let num1 = Number (prompt('Digite o primeiro número:'));
+        let num2 = Number (prompt('Digite o segundo número:'));    
+        if (num1 > num2) {
+            document.write("<p>O maior número é </p>" + num1);
+        } else if (num2 > num1) {
+            document.write("<p>O maior número é </p>" + num2);
+        } else {
+            document.write("Os números são iguais.");
+        }
+    }
+    </script>
+    <p>Este desafio utiliza a estrutura de decisão 'if-else' para verificar qual número é maior entre dois fornecidos pelo usuário.</p>
+    
+        
+</body>
+</html>

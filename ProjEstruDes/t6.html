@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+</head>
+<body>
+    <h1>Encontre o Maior Número</h1>
+    <button onclick="encontrarMaior()">Encontrar Maior Número</button>
+    <p id="resultado"></p>
+
+    <script>
+        function encontrarMaior() {
+            var numero1 = Number(prompt("Digite o primeiro número:"));
+            var numero2 = Number(prompt("Digite o segundo número:"));
+            var numero3 = Number(prompt("Digite o terceiro número:"));
+
+            var maior;
+
+            if (numero1 >= numero2 && numero1 >= numero3) {
+                maior = numero1;
+            } else if (numero2 >= numero1 && numero2 >= numero3) {
+                maior = numero2;
+            } else {
+                maior = numero3;
+            }
+
+            document.getElementById("resultado").textContent = "O maior número é: " + maior;
+        }
+    </script>
+</body>
+</html>
+

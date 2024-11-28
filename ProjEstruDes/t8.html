@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto Mais Barato</title>
+</head>
+<body>
+    <h1>Encontre o Produto Mais Barato</h1>
+    <button onclick="encontrarMaisBarato()">Verificar Preços</button>
+    <p id="resultado"></p>
+
+    <script>
+        function encontrarMaisBarato() {
+            let preco1 = Number(prompt("Digite o preço do primeiro produto:"));
+            let preco2 = Number(prompt("Digite o preço do segundo produto:"));
+            let preco3 = Number(prompt("Digite o preço do terceiro produto:"));
+
+            let maisBarato;
+
+            if (preco1 <= preco2 && preco1 <= preco3) {
+                maisBarato = preco1;
+            } else if (preco2 <= preco1 && preco2 <= preco3) {
+                maisBarato = preco2;
+            } else {
+                maisBarato = preco3;
+            }
+            document.getElementById("resultado").textContent = "O produto mais barato custa: R$ " + maisBarato.toFixed(2);
+        }
+    </script>
+</body>
+</html>

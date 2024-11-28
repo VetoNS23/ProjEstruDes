@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Sexo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Verificação de Sexo</h1>
+    <script>
+        let letra = prompt("Digite um Gênero (F ou M):");
+        
+        if (letra === "F" ) {
+            document.write("<p>A letra digitada foi: " + letra + " - Feminino</p>");
+        } else if (letra === "M") {
+            document.write("<p>A letra digitada foi: " + letra + " - Masculino</p>");
+        } else {
+            document.write("<p>A letra digitada foi: " + letra + " - Sexo Inválido</p>");
+        }
+    </script>
+</body>
+</html>
+

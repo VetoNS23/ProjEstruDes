@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Vogal ou Consoante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: burlywood;
+            color: green;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação de Vogal ou Consoante</h1>
+    <script>
+        let Let = prompt("Digite uma letra: ");
+
+        if (["a", "e", "i", "o", "u"].includes(Let)) {
+            document.write("<p>A letra digitada foi: " + Let + " - Vogal</p>");
+        } else {
+            document.write("<p>A letra digitada foi: " + Let + " - Consoante</p>");
+        }  
+    </script>
+</body>
+</html>

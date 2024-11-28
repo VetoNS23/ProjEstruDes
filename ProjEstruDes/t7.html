@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior e Menor Número</title>
+</head>
+<body>
+    <h1>Encontre o Maior e o Menor Número</h1>
+    <button onclick="encontrarMaiorMenor()">Verificar Números</button>
+
+    <script>
+        function encontrarMaiorMenor() {
+            let numero1 = Number(prompt("Digite o primeiro número:"));
+            let numero2 = Number(prompt("Digite o segundo número:"));
+            let numero3 = Number(prompt("Digite o terceiro número:"));
+
+            let maior = numero1;
+            let menor = numero1;
+
+            if (numero2 > maior) {
+                maior = numero2;
+            }
+            if (numero3 > maior) {
+                maior = numero3;
+            }
+
+            if (numero2 < menor) {
+                menor = numero2;
+            }
+            if (numero3 < menor) {
+                menor = numero3;
+            }
+            document.write("O maior número é: " + maior + " e o menor número é: " + menor);
+        }
+    </script>
+</body>
+</html>
+
+

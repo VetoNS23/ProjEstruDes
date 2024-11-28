@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Positivo e Negativo</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }     
+         
+    </style>
+
+    
+    <h1>Exercício Numero Positivo e Negativo</h1>
+    <script>
+    for (let i = 0; i < 1; i++) {
+        let valor = Number (prompt("Digite um valor:"));
+    
+        if (valor > 0) {
+            document.write('<p>O valor '+ valor + "<p>O numero é positivo. </p>");
+        } else if (valor < 0) {
+            document.write('<p>O valor' + valor + "<p>O numero é negativo. </p>");
+        } else {
+            document.write('<p>O valor ' + valor + "<p>O valor é zero.</p>" );
+        }
+    }
+</script>
+    
+</body>
+</html>

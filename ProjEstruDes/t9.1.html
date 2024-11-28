@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem Decrescente</title>
+</head>
+<body>
+    <h1>Mostrar Números em Ordem Decrescente</h1>
+    <button onclick="
+        var numero1 = parseFloat(prompt('Digite o primeiro número:'));
+        var numero2 = parseFloat(prompt('Digite o segundo número:'));
+        var numero3 = parseFloat(prompt('Digite o terceiro número:'));
+
+        var maior = Math.max(numero1, numero2, numero3);
+        var menor = Math.min(numero1, numero2, numero3);
+        var meio = numero1 + numero2 + numero3 - maior - menor;
+
+        document.write('Números em ordem decrescente: ' + maior + ', ' + meio + ', ' + menor);
+    ">Verificar Números</button>
+</body>
+</html> 
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Turno de Estudo</title>
+</head>
+<body>
+    <h1>Verifique o Turno de Estudo</h1>
+    <button onclick="verificarTurno()">Verificar Turno</button>
+
+    <script>
+        function verificarTurno() {
+            var turno = prompt('Digite o turno em que você estuda (M-matutino, V-vespertino, N-noturno):').toUpperCase();
+            var mensagem;
+
+            if (turno === 'M') {
+                mensagem = 'Bom Dia!';
+            } else if (turno === 'V') {
+                mensagem = 'Boa Tarde!';
+            } else if (turno === 'N') {
+                mensagem = 'Boa Noite!';
+            } else {
+                mensagem = 'Valor Inválido!';
+            }
+
+            document.write(mensagem);
+        }
+    </script>
+</body>
+</html>
+
+
+            

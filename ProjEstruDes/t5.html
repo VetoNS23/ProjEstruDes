@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Status do Aluno</title>
+
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Verificação de Status do Aluno</h1>
+    </header>
+    <main>
+        <section id="script">
+            <button onclick="verificarNotas()">Verificar Notas</button>
+        </section>
+        <section id="result">
+            <h2>Resultado</h2>
+            <p id="nomeCompleto"></p>
+            <p id="media"></p>
+            <p id="status"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Verificação de Status do Aluno. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function verificarNotas() {
+            var nome = prompt("Digite seu nome:");
+            var sobrenome = prompt("Digite seu sobrenome:");
+            var nota1 = Number(prompt("Digite a primeira nota:"));
+            var nota2 = Number(prompt("Digite a segunda nota:"));
+
+            var media = (nota1 + nota2) / 2;
+
+            var mensagem;
+            if (media === 10) {
+                mensagem = "Aprovado com Distinção";
+            } else if (media >= 7) {
+                mensagem = "Aprovado";
+            } else {
+                mensagem = "Reprovado";
+            }
+
+            document.getElementById("nomeCompleto").textContent = "Nome: " + nome + " " + sobrenome;
+            document.getElementById("media").textContent = "Média: " + media.toFixed(2);
+            document.getElementById("status").textContent = "Status: " + mensagem;
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
+
+

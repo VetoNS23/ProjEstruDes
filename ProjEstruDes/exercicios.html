@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+   <!--Desafio 02 – JavaScript--> <!--Prof. Márcio Ferreira -->
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+        color:midnightblue;
+        text-align: center;
+    }
+    h2 h3 {
+        text-align: center;
+    }
+    p {
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: center;
+    }
+</style>
+<h2>1. Faça um Programa que peça dois números e imprima o maior deles.</h2>
+ <h3>Maior Número</h3> 
+            <br> <!-- Campo de entrada para o primeiro número --> 
+    <label>Número 1:</label> <!-- label representa uma legenda para um item em uma interface -->
+        <input type="number" id="num1"> 
+            <br> 
+        <label>Número 2:</label> 
+        <input type="number" id="num2"> 
+            <br> <!-- Botão para acionar a verificação --> 
+        <button onclick="maiorNumero()">Verificar</button> 
+    <p id="resultado"></p> 
+    <script> function maiorNumero() { 
+        // Obtém os valores dos campos de entrada 
+        const num1 = parseFloat(document.getElementById("num1").value); 
+        const num2 = parseFloat(document.getElementById("num2").value); 
+        // Verifica qual é o maior número 
+        let maior = num1 > num2 ? num1 : num2; 
+        // Exibe o resultado na página 
+        document.getElementById("resultado").innerHTML = "O maior número é " + maior; }
+     </script>
+     <h2>2. Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou 
+        negativo.</h2>
+        <h3>Positivo ou Negativo</h3> 
+            <label>Valor:</label> 
+             <input type="number" id="valor"> 
+        <br> 
+            <button onclick="verificarValor()">Verificar</button> 
+        <p id="resultado1"></p> 
+     <script> 
+     function verificarValor() {
+         const valor = parseFloat(document.getElementById("valor").value);
+          // Verifica se o valor é positivo ou negativo 
+          let resultado = valor >= 0 ? "Positivo" : "Negativo"; 
+          document.getElementById("resultado1").innerHTML = "O valor é " + resultado; } 
+    </script>
+    <h2>3. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra 
+        escrever: F - Feminino, M - Masculino, Sexo Inválido.</h2>
+        <h2>Verificar Sexo</h2> 
+            <label>Letra:</label> 
+                <input type="text" id="letra" maxlength="1"> 
+                    <br> 
+                <button onclick="verificarSexo()">Verificar</button> 
+            <p id="resultado3"></p> 
+        <script> function verificarSexo() { const letra = document.getElementById("letra").value.toUpperCase();
+         // Verifica se a letra é "F" ou "M" 
+         let resultado = letra === "F" ? "Feminino" : letra === "M" ? "Masculino" : "Sexo Inválido"; 
+         document.getElementById("resultado3").innerHTML = resultado;} 
+        </script>
+        <h2>4. Faça um Programa que verifique se uma letra digitada é vogal ou consoante.</h2>
+        <h2>Verificar Vogal ou Consoante</h2>
+        <label>Letra:</label> 
+            <input type="text" id="letra2" maxlength="1"> 
+                <br> 
+            <button onclick="verificarVogalConsoante()">Verificar</button> 
+        <p id="resultado4"></p> 
+        <script> function verificarVogalConsoante() { const letra = document.getElementById("letra2").value.toUpperCase();
+         // Verifica se a letra é uma vogal 
+         let resultado = ["A", "E", "I", "O", "U"].includes(letra) ? "Vogal" : "Consoante"; 
+         document.getElementById("resultado4").innerHTML = "A letra digitada foi: " + letra + " - " + resultado;} 
+        </script>
+        <h2>5. Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve 
+       calcular a média alcançada por aluno e apresentar: A mensagem "Aprovado", se a média 
+       alcançada for maior ou igual a sete; A mensagem "Reprovado", se a média for menor do que 
+       sete; A mensagem "Aprovado com Distinction", se a média for igual a dez.</h2>
+       <h2>Verificar Notas</h2>
+       <label>Nome:</label> 
+        <input type="text" id="nome"> 
+        <br> 
+        <label>Sobrenome:</label> 
+        <input type="text" id="sobrenome"> 
+        <br> 
+        <label>Nota 1:</label> 
+        <input type="number" id="nota1"> 
+        <br> 
+        <label>Nota 2:</label> 
+        <input type="number" id="nota2"> 
+        <br> 
+        <button onclick="verificarNotas()">Verificar</button> 
+        <div id="result"> 
+            <p id="nomeCompleto"></p> 
+            <p id="media"></p> 
+            <p id="status"></p> 
+        </div>
+        <script> function verificarNotas() { const nome = document.getElementById("nome").value; 
+            const sobrenome = document.getElementById("sobrenome").value; 
+            const nota1 = parseFloat(document.getElementById("nota1").value); 
+            const nota2 = parseFloat(document.getElementById("nota2").value); 
+            const media = (nota1 + nota2) / 2; 
+            const status = media >= 7 ? "Aprovado" : media < 7 ? "Reprovado" : "Aprovado com Distinction"; 
+        document.getElementById("nomeCompleto").innerHTML = "Nome Completo: " + nome + " " + sobrenome; 
+        document.getElementById("media").innerHTML = "Média: " + media.toFixed(2); 
+        document.getElementById("status").innerHTML = "Status: " + status; } 
+        </script>
+        <h2>6. Faça um Programa que leia três números e mostre o maior deles.</h2>
+        <h2>Verificar Maior Número</h2>
+        <label>Numero 1:</label> 
+            <input type="number" id="num1"> 
+            <br> 
+        <label>Numero 2:</label> 
+            <input type="number" id="num2"> 
+            <br> 
+        <label>Numero 3:</label> 
+            <input type="number" id="num3"> 
+            <br> 
+        <button onclick="verificarMaiorNumero()">Verificar</button> 
+        <div id="result2"> 
+            <p id="maiorNumero"></p> 
+        </div>
+        <script> function verificarMaiorNumero() { const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value); 
+            const num3 = parseFloat(document.getElementById("num3").value); 
+            const maior = Math.max(num1, num2, num3); 
+            document.getElementById("maiorNumero").innerHTML = "O maior número digitado foi: " + maior; } 
+        </script>
+        <h2>7. Faça um Programa que leia três números e mostre o maior e o menor deles.</h2>
+        <h2>Verificar Maior e Menor Número</h2>
+        <label>Numero 1:</label> 
+            <input type="number" id="num4"> 
+            <br> 
+        <label>Numero 2:</label> 
+            <input type="number" id="num5"> 
+            <br> 
+        <label>Numero 3:</label> 
+            <input type="number" id="num6"> 
+            <br> 
+        <button onclick="verificarMaiorMenorNumero()">Verificar</button> 
+        <div id="result3"> 
+            <p id="maiorNumero2"></p> 
+            <p id="menorNumero"></p> 
+        </div>
+        <script> function verificarMaiorMenorNumero() { const num4 = parseFloat(document.getElementById("num4").value); 
+            const num5 = parseFloat(document.getElementById("num5").value); 
+            const num6 = parseFloat(document.getElementById("num6").value); 
+            const maior = Math.max(num4, num5, num6); 
+            const menor = Math.min(num4, num5, num6); 
+            document.getElementById("maiorNumero2").innerHTML = "O maior número digitado foi: " + maior; 
+            document.getElementById("menorNumero").innerHTML = "O menor número digitado foi: " + menor; } 
+        </script>
+        <h2>8. Faça um programa que pergunte o preço de três produtos e informe qual produto você 
+            deve comprar, sabendo que a decisão é sempre pelo mais barato.</h2>
+        <h2>Verificar Menor Preço</h2>
+        <label>Preço 1:</label> 
+            <input type="number" id="preco1"> 
+            <br> 
+        <label>Preço 2:</label> 
+            <input type="number" id="preco2"> 
+            <br> 
+        <label>Preço 3:</label> 
+            <input type="number" id="preco3"> 
+            <br> 
+        <button onclick="verificarMenorPreco()">Verificar</button> 
+        <div id="result4"> 
+            <p id="produto"></p> 
+        </div>
+        <script> function verificarMenorPreco() { const preco1 = parseFloat(document.getElementById("preco1").value); 
+            const preco2 = parseFloat(document.getElementById("preco2").value); 
+            const preco3 = parseFloat(document.getElementById("preco3").value); 
+            const menorPreco = Math.min(preco1, preco2, preco3); 
+            let produto = ""; 
+            if (menorPreco === preco1) { 
+                produto = "O produto mais barato é o 1."; 
+            } else if (menorPreco === preco2) { 
+                produto = "O produto mais barato é o 2."; 
+            } else { 
+                produto = "O produto mais barato é o 3."; 
+            } 
+            document.getElementById("produto").innerHTML = produto; } 
+        </script>
+        <h2>9. Faça um Programa que leia três números e mostre-os em ordem decrescente.</h2>
+        <h2>Ordem Decrescente</h2>
+        <label>Numero 1:</label> 
+            <input type="number" id="num7"> 
+            <br> 
+        <label>Numero 2:</label> 
+            <input type="number" id="num8"> 
+            <br> 
+        <label>Numero 3:</label> 
+            <input type="number" id="num9"> 
+            <br> 
+        <button onclick="verificarOrdemDecrescente()">Verificar</button> 
+        <div id="result5"> 
+            <p id="ordemDecrescente"></p> 
+        </div>
+        <script> function verificarOrdemDecrescente() { const num7 = parseFloat(document.getElementById("num7").value); 
+            const num8 = parseFloat(document.getElementById("num8").value); 
+            const num9 = parseFloat(document.getElementById("num9").value); 
+            const numeros = [num7, num8, num9]; 
+            const ordemDecrescente = numeros.sort((a, b) => b - a); 
+            document.getElementById("ordemDecrescente").innerHTML = "A ordem decrescente dos números digitados é: " + ordemDecrescente.join(", "); } 
+        </script>
+        <h2>10. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa 
+            Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.</h2>
+            <h2>Verificar Turno</h2>
+            <label>Turno:</label> 
+                <input type="text" id="turno"> 
+                <br> 
+            <button onclick="verificarTurno()">Verificar</button> 
+            <div id="result6"> 
+                <p id="mensagem"></p> 
+            </div>
+            <script>
+                function verificarTurno() { const turno = document.getElementById("turno").value.toUpperCase(); 
+                    let mensagem = ""; 
+                    if (turno === "M") { 
+                        mensagem = "Bom Dia!"; 
+                    } else if (turno === "T") { 
+                        mensagem = "Boa Tarde!"; 
+                    } else if (turno === "N") { 
+                        mensagem = "Boa Noite!"; 
+                    } else { 
+                        mensagem = "Valor Inválido!"; 
+                    } 
+                    document.getElementById("mensagem").innerHTML = mensagem; } 
+            </script>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados &copy; Veto-Br 2024</p>
+    </footer>   
+</body>
+</html>
